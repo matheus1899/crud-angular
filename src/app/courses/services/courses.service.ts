@@ -1,11 +1,12 @@
 import { Course } from './../model/course';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' //root => disponivel globalmente no app
 })
 export class CoursesService {
-  constructor(){}
+  constructor(private httpClient : HttpClient){}
   getCourseList() : Course[]{
     return [
       { _id: "1", name: "Angular", category: "Front-End" },

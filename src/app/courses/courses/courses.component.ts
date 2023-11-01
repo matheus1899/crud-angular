@@ -9,12 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesComponent implements OnInit{
   courses:Course[] = [];
-  displayedColumns:string[] = ['name', 'category']
-  coursesService : CoursesService;
+  displayedColumns:string[] = ['name', 'category'];
 
-  constructor() {
-    this.coursesService = new CoursesService();
+  constructor(private coursesService : CoursesService) {
+  }
+  ngOnInit(): void {
     this.courses = this.coursesService.getCourseList();
   }
-  ngOnInit(): void {}
 }
