@@ -1,4 +1,5 @@
 # CrudAngular
+Curso de Angular + Spring  da Loiane Groner => https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBpwaVgAPxTxhdX_TfSVlTcY
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
