@@ -1,7 +1,7 @@
 import { Course } from './../model/course';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable, first, take, tap } from 'rxjs';
+import { Observable, delay, first, take, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root' //root => disponivel globalmente no app
@@ -16,6 +16,7 @@ export class CoursesService {
                           .pipe(      // Permite manipular o resultado de maneira reativa.
                             //take(1),  // Captura a primeira leva de informações e encerra conexão
                             first(),
+                            delay(2000),
                             tap(courses => console.log(courses))
                           ); 
   }
